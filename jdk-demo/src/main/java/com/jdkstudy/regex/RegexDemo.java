@@ -44,7 +44,21 @@ public class RegexDemo {
     //           start(int group)、end(int group)返回指定组在输入字符串中的起始索引 和 结束索引 + 1
 
     // 4、编译标记
-    //
+    // Pattern.compile(String regex, int flag) 通过 | 组合多个标记
+    // todo Pattern.CANON_EQ/Pattern.CASE_INSENSITIVE(?i)/Pattern.COMMENTS(?x)/Pattern.DOTALL(?s)/Pattern.MULTILINE(?m)/Pattern.UNICODE_CASE(?u)/Pattern.UNIX_LINES(?d)
+
+    // 5、替换
+    // todo appendReplacement()  | appendTail() | 通过 "$g" 找到匹配的某个组
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // 三、《正则表达式必知必会》
+    // todo 位置匹配、使用子表达式、回溯引用、前后查找、嵌入条件
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // 四、正则表达式30分钟入门教程
+    // todo 后向引用、零宽断言、注释、处理选项、平衡组/递归匹配
+
 
 
 
