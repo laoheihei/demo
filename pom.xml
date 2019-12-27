@@ -11,6 +11,7 @@
     <modules>
         <module>jdk-demo</module>
         <module>idea-study</module>
+        <module>gson-study</module>
     </modules>
 
     <dependencies>
@@ -22,7 +23,32 @@
             <scope>test</scope>
         </dependency>
 
+
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.10</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                    <!--&lt;!&ndash;根据你把lib放的位置&ndash;&gt;
+                    <compilerArguments>
+                        <extdirs>${project.basedir}/lib/*</extdirs>
+                    </compilerArguments>-->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
