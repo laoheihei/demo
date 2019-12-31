@@ -14,21 +14,21 @@ import static org.junit.Assert.*;
  */
 public class AppleFilterTest {
 
-    public static List<AppleFilter.Apple> redApples = new ArrayList<>();
+    public static List<Apple> redApples = new ArrayList<>();
 
     static {
-        AppleFilter.Apple apple = new AppleFilter.Apple();
+        Apple apple = new Apple();
         apple.setColor("red");
         redApples.add(apple);
     }
 
     @Test
     public void filterApple() {
-        List<AppleFilter.Apple> appleList = AppleFilter.filterApple(redApples, AppleFilter.Apple::isGreenApple);
+        List<Apple> appleList = AppleFilter.filterApple(redApples, Apple::isGreenApple);
         assertEquals(0, appleList.size());
 
 
-        List<AppleFilter.Apple> apples = AppleFilter.filterApple(redApples, ((AppleFilter.Apple apple) -> "red".equals(apple.getColor())));
+        List<Apple> apples = AppleFilter.filterApple(redApples, ((Apple apple) -> "red".equals(apple.getColor())));
         assertEquals(1, apples.size());
     }
 

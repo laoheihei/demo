@@ -1,7 +1,5 @@
 package com.jdkstudy.java8.preview.filter;
 
-import lombok.Data;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
@@ -17,17 +15,16 @@ public class AppleFilter {
         return apples.stream().filter(predicate).collect(Collectors.toList());
     }
 
-    @Data
-    public static class Apple {
-        private String color;
-        private double weight;
+    public static void main(String[] args) {
+        ArrayList<Apple> apples = new ArrayList<>();
+        List<Apple> collect = apples.parallelStream().filter(apple -> apple.getWeight() > 150 && "green".equals(apple.getColor())).collect(Collectors.toList());
 
-        public static boolean isGreenApple(Apple apple) {
-            return "green".equals(apple.getColor());
-        }
-
-        public static boolean isHeavyApple(Apple apple) {
-            return apple.getWeight() > 150;
+        Apple a = new Apple();
+        if ("green".equals(a.getColor())) {
+            System.out.println("绿了");
+        } else {
+            System.out.println("红了");
         }
     }
+
 }
